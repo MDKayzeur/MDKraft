@@ -2,8 +2,10 @@
 #include <iostream>
 #include <vector>
 #include "imgui.h"
-
 #include "Inventory.h"
+#include <glm/glm.hpp>
+using namespace glm;
+
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -15,6 +17,17 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 int main(void)
 {
+
+    static const GLfloat g_vertex_buffer_data[] = {
+       -1.0f, -1.0f, 0.0f,
+       1.0f, -1.0f, 0.0f,
+       0.0f,  1.0f, 0.0f,
+    };
+
+
+
+    glDrawArrays(GL_TRIANGLES, 0, 12 * 3); // 12*3 indices starting at 0 -> 12 triangles -> 6 squares
+
     glEnable(GL_DEPTH_TEST);
     auto* inv = new Inventory(10,5);
 
@@ -47,6 +60,7 @@ int main(void)
     while (!glfwWindowShouldClose(MainWindow))
     {
         glfwSetKeyCallback(MainWindow, key_callback);
+
 
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);

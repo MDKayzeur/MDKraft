@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\MDKraft\MDKraft\bin\imgui-master\imgui-master;D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\MDKraft\MDKraft\bin\imgui-master\imgui-master;D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\include;D:\MDKraft\MDKraftGit\MDKraft\bin\glm-master\glm-master;D:\MDKraft\MDKraftGit\MDKraft\bin\glew-2.1.0-win32\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\lib-vc2022;D:\MDKraft\MDKraft\bin\imgui-master\imgui-master\examples\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\MDKraft\MDKraftGit\MDKraft\bin\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\lib-vc2022;D:\MDKraft\MDKraft\bin\imgui-master\imgui-master\examples\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,15 +121,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\MDKraft\MDKraft\bin\imgui-master\imgui-master;D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\MDKraft\MDKraft\bin\imgui-master\imgui-master;D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\include;D:\MDKraft\MDKraftGit\MDKraft\bin\glm-master\glm-master;D:\MDKraft\MDKraftGit\MDKraft\bin\glew-2.1.0-win32\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\lib-vc2022;D:\MDKraft\MDKraft\bin\imgui-master\imgui-master\examples\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\MDKraft\MDKraftGit\MDKraft\bin\glew-2.1.0-win32\glew-2.1.0\lib\Release\Win32;D:\MDKraft\MDKraft\bin\glfw-3.4.bin.WIN64\lib-vc2022;D:\MDKraft\MDKraft\bin\imgui-master\imgui-master\examples\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;user32.lib;gdi32.lib;shell32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -139,6 +139,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="Vertice.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cube.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Material.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="Vertice.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
